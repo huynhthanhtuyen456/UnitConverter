@@ -1,6 +1,15 @@
+<!-- res/values/strings.xml -->
 <resources>
-    <string name="app_name">UnitConverter</string>
-    <string-array name="length_units">
+    <string name="app_name">Unit Converter</string>
+    <string name="convert_button_text">Convert</string>
+    <string name="input_value_hint">Enter value to convert</string>
+    <string name="result_prefix">Result: </string>
+    <string name="error_empty_input">Please enter a value to convert.</string>
+    <string name="error_invalid_input">Invalid input. Please enter a valid number.</string>
+    <string name="from_label">From:</string>
+    <string name="to_label">To:</string>
+
+    <string-array name="length_units_array">
         <item>Metre</item>
         <item>Millimetre</item>
         <item>Mile</item>

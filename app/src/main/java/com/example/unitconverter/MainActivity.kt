@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvResult: TextView
     private lateinit var tvError: TextView
 
-    private val units = arrayOf("Metre", "Millimetre", "Mile", "Foot")
-
     // Conversion factors relative to Metre
     private val conversionFactors = mapOf(
         "Metre" to 1.0,
@@ -50,6 +48,11 @@ class MainActivity : AppCompatActivity() {
         tvResult = findViewById(R.id.tvResult)
         tvError = findViewById(R.id.tvError)
 
+        val stringArrayFromResources: Array<String> = resources.getStringArray(R.array.length_units_array)
+
+        // Convert the Array<String> to a List<String>
+        val units = stringArrayFromResources.toList()
+
         // Setup Spinners
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, units)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
@@ -64,16 +67,16 @@ class MainActivity : AppCompatActivity() {
     private fun convertUnits() {
         val inputValueString = etInputValue.text.toString()
         tvError.text = "" // Clear previous errors
-        tvResult.text = "Result: " // Clear previous result
+        tvResult.text = R.string.result_prefix.toString() // Clear previous result
 
         if (inputValueString.isEmpty()) {
-            tvError.text = "Please enter a value to convert."
+            tvError.text = R.string.error_empty_input.toString()
             return
         }
 
         val inputValue = inputValueString.toDoubleOrNull()
         if (inputValue == null) {
-            tvError.text = "Invalid input. Please enter a valid number."
+            tvError.text = R.string.error_invalid_input.toString()
             return
         }
 
