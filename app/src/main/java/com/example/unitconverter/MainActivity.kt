@@ -1,8 +1,6 @@
 package com.example.unitconverter
 
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
@@ -70,13 +68,15 @@ class MainActivity : AppCompatActivity() {
         tvResult.text = R.string.result_prefix.toString() // Clear previous result
 
         if (inputValueString.isEmpty()) {
-            tvError.text = R.string.error_empty_input.toString()
+            tvError.text = getString(R.string.error_empty_input)
+            tvResult.text = ""
             return
         }
 
         val inputValue = inputValueString.toDoubleOrNull()
         if (inputValue == null) {
             tvError.text = R.string.error_invalid_input.toString()
+            tvResult.text = ""
             return
         }
 
