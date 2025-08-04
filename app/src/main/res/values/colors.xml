@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Add your custom app theme colors here -->
+    <color name="my_app_primary_color">#6200EE</color> <!-- Example: Purple -->
+    <color name="my_app_primary_variant_color">#3700B3</color> <!-- Example: Darker Purple -->
+
+
+    <!-- You might also need a light version if you're supporting DayNight -->
+    <color name="my_light_primary">#FFBB86FC</color>
+    <color name="brand_primary">#BB86FC</color>
+    <color name="brand_surface">#121212</color>
+    <color name="brand_onSurface">#FFFFFF</color> <!-- Example: A purple for light theme -->
+    <color name="my_light_surface">#FFFFFF</color>
+    <color name="my_light_onSurface">#000000</color>
+    <color name="my_dark_primary">#BB86FC</color> <!-- Example: A purple suitable for dark theme -->
+    <color name="my_dark_surface">#121212</color> <!-- Standard dark surface color -->
+    <color name="my_dark_onSurface">#FFFFFF</color>
+
+    <!-- For Material 3 dark theme (if using option B from dark theme config) -->
+    <color name="brand_primary_dark">#D0BCFF</color>
+</resources>

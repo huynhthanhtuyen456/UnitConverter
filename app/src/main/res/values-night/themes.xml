@@ -1,0 +1,13 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.UnitConverter" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Base application theme for dark mode. -->
+        <!-- Customize your dark theme here. -->
+        <!-- For example, to change the primary color in dark theme: -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+
+        <!-- You'll typically want to override other relevant Material 3 color roles -->
+         <item name="colorSurface">@color/my_dark_surface</item>
+         <item name="colorOnSurface">@color/my_dark_onSurface</item>
+    </style>
+</resources>
